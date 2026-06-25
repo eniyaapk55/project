@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scuderia Ferrari F1</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9GT2loQql_Z8RN09Vt64hl3JZFn0yIhGC03mrC5AB63i_2LHAOt0xi6Tf&s=10");
+    background-size:cover;
+    background-position:center;
+}
+
+/* Dark Racing Overlay */
+.overlay{
+    position:relative;
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,0.95) 0%,
+        rgba(0,0,0,0.85) 40%,
+        rgba(80,0,0,0.65) 75%,
+        rgba(255,0,0,0.35) 100%
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Ferrari Red Glow */
+.overlay::after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:-150px;
+    width:500px;
+    height:100%;
+
+    background:radial-gradient(
+        circle,
+        rgba(255,0,0,0.8) 0%,
+        rgba(255,0,0,0.3) 40%,
+        transparent 80%
+    );
+
+    filter:blur(80px);
+}
+
+/* Main Card */
+.card{
+    position:relative;
+    z-index:2;
+    width:550px;
+    padding:40px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:25px;
+
+    box-shadow:0 0 35px rgba(255,0,0,0.4);
+
+    animation:fadeIn 2s ease;
+}
+
+h1{
+    font-size:55px;
+    color:#ff1a1a;
+    text-shadow:0 0 20px red;
+    margin-bottom:10px;
+}
+
+h2{
+    color:white;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+p{
+    color:#e0e0e0;
+    font-size:18px;
+    line-height:1.8;
+}
+
+button{
+    margin-top:25px;
+    padding:14px 35px;
+    font-size:18px;
+    font-weight:bold;
+
+    border:none;
+    border-radius:30px;
+
+    background:#ff0000;
+    color:white;
+
+    cursor:pointer;
+    transition:0.4s;
+}
+
+button:hover{
+    background:white;
+    color:red;
+    transform:scale(1.08);
+    box-shadow:0 0 25px red;
+}
+
+.f1{
+    color:#ffd700;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <div class="card">
+
+        <div class="f1">🏎️ FORMULA 1</div>
+
+        <h1>SCUDERIA FERRARI</h1>
+
+        <h2>THE PRANCING HORSE</h2>
+
+        <p>
+            Ferrari is the most successful and iconic team in Formula One history.
+            Built on speed, passion and excellence, the Scuderia continues to
+            fight for victory on the world's greatest racing circuits.
+        </p>
+
+        <button onclick="alert('FORZA FERRARI! 🏎️🔥')">
+            ENTER THE PADDOCK
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>
